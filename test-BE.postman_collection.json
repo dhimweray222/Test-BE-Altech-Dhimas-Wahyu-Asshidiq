@@ -1,0 +1,1164 @@
+{
+	"info": {
+		"_postman_id": "9e10036f-23e2-4df6-ad22-4b35629c9226",
+		"name": "test-BE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23663611"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Barang Kecil\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Barang Besar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac-Kker46fD7A5+wsnr2p12iWzsqXs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:40:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Has Been Created Successfully\",\n    \"category\": {\n        \"id\": 2,\n        \"name\": \"Barang Besar\",\n        \"updatedAt\": \"2024-01-18T22:40:45.300Z\",\n        \"createdAt\": \"2024-01-18T22:40:45.300Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get all category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/categories",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-cGwL9bN2QgqblJ7S1FooML2lqNg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:42:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Found\",\n    \"categories\": [\n        {\n            \"id\": 1,\n            \"name\": \"Kaca\",\n            \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n            \"updatedAt\": \"2024-01-18T22:40:34.422Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Barang Besar\",\n            \"createdAt\": \"2024-01-18T22:40:45.300Z\",\n            \"updatedAt\": \"2024-01-18T22:40:45.300Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "find one category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categories/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find one category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/categories/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "148"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"94-C6bN3cDfnYOx0H8u1JyW1qaCERw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:44:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Found\",\n    \"category\": {\n        \"id\": 2,\n        \"name\": \"Barang Besar\",\n        \"createdAt\": \"2024-01-18T22:40:45.300Z\",\n        \"updatedAt\": \"2024-01-18T22:40:45.300Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update category",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Botol\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/categories/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update category",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Botol\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/categories/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-lhMZ7LIQoy48VktjR2r7L6+CElw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:45:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Botol\",\n    \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n    \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/categories/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"categories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/categories/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"categories",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-NkBXC9FFZgFUg17PBDC3V8aXOFk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:48:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Has Been Deleted Successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "create book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Great Gatsby\",\n  \"description\": \"A novel by F. Scott Fitzgerald\",\n  \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n  \"release_year\": 1925,\n  \"price\": \"$10.99\",\n  \"total_page\": 180,\n  \"thickness\": \"1 inch\",\n  \"category_id\": 1\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"qweasd\",\n  \"description\": \"ooo\",\n  \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n  \"release_year\": 2021,\n  \"price\": \"$10.99\",\n  \"total_page\": 201,\n  \"category_id\": 1\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-RzF553QDQo+L+8f4ciCyYi3kdzc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 09:34:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 17,\n    \"title\": \"qweasd\",\n    \"description\": \"ooo\",\n    \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n    \"release_year\": 2021,\n    \"price\": \"$10.99\",\n    \"total_page\": 201,\n    \"thickness\": \"tebal\",\n    \"category_id\": 1,\n    \"createdAt\": \"2024-01-19T09:34:34.000Z\",\n    \"updatedAt\": \"2024-01-19T09:34:34.163Z\"\n}"
+						},
+						{
+							"name": "create book 400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"qweasd\",\n  \"description\": \"ooo\",\n  \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n  \"release_year\": 2022,\n  \"price\": \"$10.99\",\n  \"total_page\": 201,\n  \"category_id\": 1\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-XP+W8vCKz/5SMOd91VN3YK+u9yM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 09:47:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"Release year must be between 1980 and 2021\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "423"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a7-iyQH42RoCM7GopFEZY1dW+SO7Cw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:59:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"The Great Gatsby\",\n        \"description\": \"A novel by F. Scott Fitzgerald\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 1925,\n        \"price\": \"$10.99\",\n        \"total_page\": 180,\n        \"thickness\": \"1 inch\",\n        \"createdAt\": \"2024-01-18T22:58:52.615Z\",\n        \"updatedAt\": \"2024-01-18T22:58:52.615Z\",\n        \"category_id\": 1,\n        \"Category\": {\n            \"id\": 1,\n            \"name\": \"Botol\",\n            \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n            \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n        }\n    }\n]"
+						},
+						{
+							"name": "get all book with filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books?minPage=200&maxPage=203&sortByTitle=asc",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "minPage",
+											"value": "200"
+										},
+										{
+											"key": "maxPage",
+											"value": "203"
+										},
+										{
+											"key": "sortByTitle",
+											"value": "asc"
+										},
+										{
+											"key": "title",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2723"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa3-Gs0A64wuu8e5/+bCvYVsZaDrK1s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 10:25:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 21,\n        \"title\": \"aasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 2021,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T10:25:05.000Z\",\n        \"updatedAt\": \"2024-01-19T10:25:05.715Z\",\n        \"category_id\": 6,\n        \"Category\": {\n            \"id\": 6,\n            \"name\": \"Barang Kecil\",\n            \"createdAt\": \"2024-01-19T10:11:31.967Z\",\n            \"updatedAt\": \"2024-01-19T10:11:31.967Z\"\n        }\n    },\n    {\n        \"id\": 19,\n        \"title\": \"aweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 2021,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T10:23:21.000Z\",\n        \"updatedAt\": \"2024-01-19T10:23:21.734Z\",\n        \"category_id\": 6,\n        \"Category\": {\n            \"id\": 6,\n            \"name\": \"Barang Kecil\",\n            \"createdAt\": \"2024-01-19T10:11:31.967Z\",\n            \"updatedAt\": \"2024-01-19T10:11:31.967Z\"\n        }\n    },\n    {\n        \"id\": 20,\n        \"title\": \"bweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 2021,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T10:23:27.000Z\",\n        \"updatedAt\": \"2024-01-19T10:23:27.390Z\",\n        \"category_id\": 6,\n        \"Category\": {\n            \"id\": 6,\n            \"name\": \"Barang Kecil\",\n            \"createdAt\": \"2024-01-19T10:11:31.967Z\",\n            \"updatedAt\": \"2024-01-19T10:11:31.967Z\"\n        }\n    },\n    {\n        \"id\": 15,\n        \"title\": \"qweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 1999,\n        \"price\": \"$10.99\",\n        \"total_page\": 200,\n        \"thickness\": \"sedang\",\n        \"createdAt\": \"2024-01-19T09:34:07.000Z\",\n        \"updatedAt\": \"2024-01-19T09:34:07.747Z\",\n        \"category_id\": 1,\n        \"Category\": {\n            \"id\": 1,\n            \"name\": \"Botol\",\n            \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n            \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n        }\n    },\n    {\n        \"id\": 18,\n        \"title\": \"qweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 2021,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T10:11:40.000Z\",\n        \"updatedAt\": \"2024-01-19T10:11:40.717Z\",\n        \"category_id\": 6,\n        \"Category\": {\n            \"id\": 6,\n            \"name\": \"Barang Kecil\",\n            \"createdAt\": \"2024-01-19T10:11:31.967Z\",\n            \"updatedAt\": \"2024-01-19T10:11:31.967Z\"\n        }\n    },\n    {\n        \"id\": 16,\n        \"title\": \"qweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 1999,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T09:34:12.000Z\",\n        \"updatedAt\": \"2024-01-19T09:34:12.172Z\",\n        \"category_id\": 1,\n        \"Category\": {\n            \"id\": 1,\n            \"name\": \"Botol\",\n            \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n            \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n        }\n    },\n    {\n        \"id\": 17,\n        \"title\": \"qweasd\",\n        \"description\": \"ooo\",\n        \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n        \"release_year\": 2021,\n        \"price\": \"$10.99\",\n        \"total_page\": 201,\n        \"thickness\": \"tebal\",\n        \"createdAt\": \"2024-01-19T09:34:34.000Z\",\n        \"updatedAt\": \"2024-01-19T09:34:34.163Z\",\n        \"category_id\": 1,\n        \"Category\": {\n            \"id\": 1,\n            \"name\": \"Botol\",\n            \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n            \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "find one book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "find one book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "421"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a5-Q4jVjV/g8hw5TGaP7KHFCXw/lWI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 Jan 2024 22:59:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"The Great Gatsby\",\n    \"description\": \"A novel by F. Scott Fitzgerald\",\n    \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n    \"release_year\": 1925,\n    \"price\": \"$10.99\",\n    \"total_page\": 180,\n    \"thickness\": \"1 inch\",\n    \"createdAt\": \"2024-01-18T22:58:52.615Z\",\n    \"updatedAt\": \"2024-01-18T22:58:52.615Z\",\n    \"category_id\": 1,\n    \"Category\": {\n        \"id\": 1,\n        \"name\": \"Botol\",\n        \"createdAt\": \"2024-01-18T22:40:34.422Z\",\n        \"updatedAt\": \"2024-01-18T22:45:02.969Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update book",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"qweasd\",\n  \"description\": \"ooo\",\n  \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n  \"release_year\": 2022,\n  \"price\": \"$10.99\",\n  \"total_page\": 201,\n  \"category_id\": 1\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update book",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"qweasd\",\n  \"description\": \"ooo\",\n  \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n  \"release_year\": 2022,\n  \"price\": \"$10.99\",\n  \"total_page\": 201,\n  \"category_id\": 1\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-izhtSjQfXqDFLUf9AqMyCxAlKUA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 09:48:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"title\": \"qweasd\",\n    \"description\": \"ooo\",\n    \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n    \"release_year\": 2022,\n    \"price\": \"$10.99\",\n    \"total_page\": 201,\n    \"thickness\": \"1 inch\",\n    \"createdAt\": \"2024-01-18T23:04:34.534Z\",\n    \"updatedAt\": \"2024-01-19T09:48:02.949Z\",\n    \"category_id\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/books/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"books",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "delete book",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/books/:id",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-R6BNutUsM5R8raFhSLq2vvyahqw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 09:55:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book Has Been Deleted Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all books by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/categories/:id/books",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"categories",
+								":id",
+								"books"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all books by category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/categories/:id/books",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"categories",
+										":id",
+										"books"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "294"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"126-EwsuyN+VCR+V07qMz9fyeTJyHkE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 19 Jan 2024 10:11:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"books\": [\n        {\n            \"id\": 18,\n            \"title\": \"qweasd\",\n            \"description\": \"ooo\",\n            \"image_url\": \"https://example.com/great-gatsby-cover.jpg\",\n            \"release_year\": 2021,\n            \"price\": \"$10.99\",\n            \"total_page\": 201,\n            \"thickness\": \"tebal\",\n            \"createdAt\": \"2024-01-19T10:11:40.000Z\",\n            \"updatedAt\": \"2024-01-19T10:11:40.717Z\",\n            \"category_id\": 6\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
